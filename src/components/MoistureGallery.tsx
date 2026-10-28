@@ -7,15 +7,15 @@ import { projects } from '../data/projects'
 const tiles: ({ kind: 'project'; projectIndex: number } | { kind: 'ambient'; label: string; line: string; tone: string })[] = [
   { kind: 'ambient', label: '01 / THINK', line: '문제를 발견하고', tone: 'lavender' },
   { kind: 'project', projectIndex: 0 },
-  { kind: 'ambient', label: 'BUILD', line: '작동하는 아이디어', tone: 'butter' },
+  { kind: 'ambient', label: 'BUILD', line: '아이디어를 한스푼', tone: 'butter' },
   { kind: 'project', projectIndex: 2 },
   { kind: 'project', projectIndex: 4 },
-  { kind: 'ambient', label: '02 / DESIGN', line: '경험을 설계하고', tone: 'mint' },
+  { kind: 'ambient', label: '02 / DESIGN', line: '기획하고', tone: 'mint' },
   { kind: 'project', projectIndex: 1 },
-  { kind: 'ambient', label: 'ITERATE', line: '더 나은 방식으로', tone: 'rose' },
-  { kind: 'ambient', label: '03 / LEARN', line: '새로운 기술을 배우고', tone: 'sky' },
+  { kind: 'ambient', label: 'ITERATE', line: '더 나은 방향으로', tone: 'rose' },
+  { kind: 'ambient', label: '03 / LEARN', line: '...', tone: 'sky' },
   { kind: 'project', projectIndex: 3 },
-  { kind: 'ambient', label: 'SHIP', line: '세상에 내보내다', tone: 'peach' },
+  { kind: 'ambient', label: 'SHIP', line: '결과물을 도출합니다', tone: 'peach' },
   { kind: 'project', projectIndex: 5 },
 ]
 
@@ -71,7 +71,7 @@ export default function MoistureGallery() {
   return <section className="moisture-section" id="projects" aria-label="인터랙티브 프로젝트 갤러리">
     <div className="container gallery-intro">
       <div className="section-kicker"><span>01 / SELECTED WORK</span><span>HOVER TO DISCOVER</span></div>
-      <div className="gallery-heading"><div><h2>흐릿한 아이디어를,<br/><em>선명한 결과물로.</em></h2><p>카드에 마우스를 올려 프로젝트를 발견해 보세요.<br/>클릭하시면 구현 과정과 기술적인 고민을 볼 수 있습니다.</p></div><div className="gallery-legend"><span className="legend-dot"/> INTERACTIVE PROJECT SPACE <MoveUpRight size={15}/></div></div>
+      <div className="gallery-heading"><div><h2>흐릿한 아이디어를,<br/><em>선명한 결과물로.</em></h2><p>카드에 마우스를 올려 프로젝트를 발견해 보세요.<br/>클릭하시면 구현 과정과 기술적인 고민을 확인하실 수 있습니다.</p></div><div className="gallery-legend"><span className="legend-dot"/> INTERACTIVE PROJECT SPACE <MoveUpRight size={15}/></div></div>
     </div>
     <div className={`moisture-canvas ${active !== null ? 'has-active' : ''}`} ref={galleryRef} onMouseLeave={() => activate(null)}>
       <div className="moisture-grid">
